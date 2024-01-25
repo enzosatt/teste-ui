@@ -14,7 +14,7 @@ describe('Funcionalidade de produto', () => {
             .click()
     });
 
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
        var quantidade = 2
         cy.get('[class="product-block grid"]')
             .contains('Ariel Roll Sleeve Sweatshirt').click()
@@ -27,7 +27,9 @@ describe('Funcionalidade de produto', () => {
         cy.get('.single_add_to_cart_button').click()
 
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade)
-
+it.only('Deve adicionar um produto ao carrinho - Usando Comandos customizados', () => {
+    cy.addProdutos ('Ariel Roll Sleeve Sweatshirt', 'L', 'Green', 2)
+});
     });
 
 

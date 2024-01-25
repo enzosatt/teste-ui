@@ -9,7 +9,9 @@ context ('Funcionalidade Login', () => {
 afterEach(() => {
   cy.screenshot ()
 });
-
+it('', () => {
+  
+});
   it('Deve fazer login com sucesso', () =>{
   
   cy.get ('#username'). type (perfil.usuario)
